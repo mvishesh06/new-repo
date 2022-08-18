@@ -4,10 +4,10 @@ pipeline {
         PATH = "${PATH}:${getTerraformPath()}"
     }
     stages {
-        stage(S3 - create Bucket) {
+        stage('S3 - create Bucket') {
             steps{
                 script{
-                    getTerraformPath('javahome-tf-1212')
+                    createS3Bucket('javahome-tf-1212')
                 }
             }
 
